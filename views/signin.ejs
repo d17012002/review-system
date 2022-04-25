@@ -1,0 +1,28 @@
+<%- include("./partials/header.ejs") %>
+
+<link rel="stylesheet" href="signin.css">
+
+  <body>
+    <center>
+      <div class="container">
+        <h1>FFCS Review System - VIT Bhopal</h1>
+        <p class="subHeading">
+          SignIn to see reviews of faculty for FFCS!
+        </p>
+        <form class="gradient-border" action="/signin" method="POST">
+          <div class="container">
+
+            <label>Email</label>
+            <input type="text" placeholder="Enter Email ID" name="ename" required />
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required />
+
+            <button type="submit">Sign In</button>
+            <input type="checkbox" checked="checked" /> Remember me
+          </div>
+        </form>
+      </div>
+    </center>
+  </body>
+  <%- include("./partials/footer.ejs") %>

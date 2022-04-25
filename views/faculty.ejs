@@ -1,0 +1,60 @@
+<%- include("./partials/header.ejs") %>
+
+  <link rel="stylesheet" href="faculty.css">
+
+  <body>
+    <div class="container">
+      <h6>Faculty Count : <%= num %>
+      </h6>
+    </div>
+    <div class="container">
+      <center>
+        <div class="col-lg-12 col-sm-12">
+          <h4>Faculty reviews for FFCS!</h4>
+          <p class="subHeading">Reviews of all these faculties are dropped by your friends and seniors.</p><br><br>
+
+          <%for(var i=0; i<key.length; i++){%>
+
+            <button class="accordion">
+              <%=i+1%>. <%= key[i].faculty %> <i class="fas fa-user-tie"></i>
+            </button>
+
+            <div class="panel">
+              <%for(var j=0; j<key[i].reason.length; j++){%>
+                <p><i style="color: rgb(34, 173, 238);" class="fas fa-arrow-alt-circle-right"></i>
+                  <em id="reviews">
+                    <%= key[i].reason[j] %>
+                  </em>
+                </p>
+                <%}%>
+            </div>
+            <%}%>
+              <div class="footer">
+                <br>
+                <p class="subHeading">Copyright 2021 @ Four Muskeeters</p>
+              </div>
+      </center>
+    </div>
+    </div>
+    <script type="module" src="../databaseURL.js"></script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+  </body>
+
+  <%- include("./partials/footer.ejs") %>

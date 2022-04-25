@@ -1,0 +1,29 @@
+<%- include("./partials/header.ejs") %>
+
+<link rel="stylesheet" href="signup.css">
+
+  <body>
+    <center>
+      <h1>FFCS Review System - VIT Bhopal</h1>
+      <p class="subHeading">
+        SignUp if you are new here: Add faculty name and drop your reviews.
+      </p>
+      <form class="gradient-border" action="/signup" method="POST">
+
+        <div class="container">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter Name" name="name" required />
+
+          <label>Email</label>
+          <input type="email" placeholder="Enter Email ID" name="email" required />
+
+          <label>Password</label>
+          <input type="password" placeholder="Create Password" name="psw" required />
+
+          <button type="submit">Sign Up</button>
+          <input type="checkbox" checked="checked" /> Remember me
+        </div>
+      </form>
+    </center>
+  </body>
+  <%- include("./partials/footer.ejs") %>

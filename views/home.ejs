@@ -1,0 +1,33 @@
+<%- include("./partials/header.ejs") %>
+
+<link rel="stylesheet" href="home.css">
+
+  <body>
+    <div class="container">
+      <center>
+        <div class="col-lg-6 col-lg-12 heading">
+          <h1>VIT'B : Faculty Review System</h1>
+          <p class="subHeading">
+            SignIn / SignUp: To see faculty list
+          </p>
+        </div>
+        <div class="col-lg-6 col-lg-12 btn-div">
+          <center>
+            <form action="/" method="POST">
+              <button name="btn1" value="signin" type="submit" class="btn btn-lg btn-dark download-button">
+                Sign In <i class="fas fa-sign-in-alt"></i>
+              </button>
+              <button name="btn2" value="signup" type="submit" class="btn btn-lg btn-outline-light download-button">
+                Sign Up <i class="fas fa-user-plus"></i>
+              </button>
+            </form>
+          </center>
+        </div>
+      </center>
+    </div>
+    <footer>
+      <p>Copyright 2021 @ Four Muskeeter</p>
+    </footer>
+  </body>
+  
+  <%- include("./partials/footer.ejs") %>
